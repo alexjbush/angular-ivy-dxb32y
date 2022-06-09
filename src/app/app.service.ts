@@ -9,7 +9,7 @@ export class AppService {
 
   public getContents(path: string): Observable<string> {
     if (isPlatformServer(this.platformId) && path.includes('./')) {
-      path = path.replace('./', '')
+      path = `http://localhost:4200/${path.replace('./', '')}`
     }
     return this.http.get(path, {
       observe: 'body',
