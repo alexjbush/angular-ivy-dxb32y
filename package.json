@@ -7,6 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "prerender-script": "node prerender.js",
     "dev:ssr": "ng run preloading:serve-ssr",
     "serve:ssr": "node dist/preloading/server/main.js",
     "build:ssr": "ng build && ng run preloading:server",
